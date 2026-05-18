@@ -17,6 +17,8 @@ body {
   transition: color var(--transition-normal), background-color var(--transition-normal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
 }
 
 #root {
@@ -42,9 +44,4 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
-}
-
-/* 安全区域适配 */
-body {
-  padding-bottom: env(safe-area-inset-bottom);
 }

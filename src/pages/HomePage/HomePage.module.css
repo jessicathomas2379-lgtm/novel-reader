@@ -20,6 +20,7 @@
   pointer-events: none;
   z-index: 0;
   transition: opacity var(--transition-normal);
+  margin-top: calc(-1 * env(safe-area-inset-top, 0px));
 }
 
 [data-theme="dark"] .headerBg {
