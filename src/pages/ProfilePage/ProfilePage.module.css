@@ -11,7 +11,7 @@
 
 /* 顶部背景 - 铺在所有图层最下面 */
 .headerBg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
