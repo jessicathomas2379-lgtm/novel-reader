@@ -1,0 +1,64 @@
+/* Toggle/Switch 组件样式 - 精确匹配 Figma 设计稿 */
+/* Switch: 40x24(含padding), 圆角15px, 滑块20x20 圆角999px, shadow 0 3px 1px rgba(0,0,0,0.05) */
+
+.toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 40px;
+  height: 24px;
+  border-radius: 15px;
+  background-color: var(--color-switch-off);
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+
+.toggle:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+/* Knob / 滑块 */
+.knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-normal);
+}
+
+/* Checked state */
+.checked {
+  background-color: var(--color-switch-on);
+}
+
+.checked .knob {
+  transform: translateX(16px);
+}
+
+/* Default variant */
+.default.checked {
+  background-color: var(--color-switch-on);
+}
+
+/* Primary variant */
+.primary.checked {
+  background-color: var(--color-switch-on);
+}
+
+.primary {
+  background-color: var(--color-switch-off);
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

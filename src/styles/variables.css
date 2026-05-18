@@ -1,0 +1,105 @@
+/* CSS 自定义属性 - 主题变量（精确匹配 Figma 设计稿） */
+
+/* 亮色模式（默认） */
+:root {
+  /* 背景色 */
+  --color-bg-page: #F5F5F5;
+  --color-bg-reader: #F6F6F6;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+
+  /* 文字色 */
+  --color-text-primary: #2E2E30;
+  --color-text-dark: #1A1A1D;
+  --color-text-secondary: #929293;
+  --color-text-tabbar-inactive: #C5C5C5;
+
+  /* 功能色 */
+  --color-accent: #00C4D0;
+  --color-tag: #FF7D00;
+  --color-toast-bg: #666666;
+
+  /* 边框色 */
+  --color-border: #EEEEEE;
+  --color-border-dark: #E6E6E6;
+
+  /* 图标色 */
+  --color-icon-default: #A1A3B0;
+  --color-icon-dark: #2E2E30;
+
+  /* Switch */
+  --color-switch-on: #00C4D0;
+  --color-switch-off: #EEEEEE;
+
+  /* 渐变色 */
+  --gradient-primary: linear-gradient(270deg, rgba(0, 196, 233, 1) 0%, rgba(0, 239, 185, 1) 100%);
+
+  /* 蒙层 */
+  --color-overlay: rgba(0, 0, 0, 0.6);
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+
+  /* 圆角 */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* 字体大小 */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-xxl: 20px;
+  --font-size-chapter: 22px;
+
+  /* 行高 */
+  --line-height-xs: 16px;
+  --line-height-sm: 18px;
+  --line-height-md: 22px;
+  --line-height-lg: 24px;
+  --line-height-xl: 26px;
+  --line-height-chapter: 34px;
+  --line-height-reader: 32px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-switch: 0 3px 1px rgba(0, 0, 0, 0.05);
+
+  /* 过渡 */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+}
+
+/* 暗色模式 */
+[data-theme="dark"] {
+  --color-bg-page: #1A1A1A;
+  --color-bg-reader: #1A1A1A;
+  --color-bg-primary: #2D2D2D;
+  --color-bg-secondary: #1A1A1A;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-dark: #FFFFFF;
+  --color-text-secondary: #999999;
+  --color-text-tabbar-inactive: #666666;
+
+  --color-border: #3D3D3D;
+  --color-border-dark: #3D3D3D;
+
+  --color-icon-default: #999999;
+  --color-icon-dark: #FFFFFF;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+}

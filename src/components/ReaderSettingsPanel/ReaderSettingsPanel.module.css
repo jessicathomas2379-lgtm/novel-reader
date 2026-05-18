@@ -1,0 +1,140 @@
+/* ReaderSettingsPanel 阅读器设置面板样式 - 精确匹配 Figma 设计稿 */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 900;
+}
+
+/* 顶部菜单栏 */
+.topBar {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--color-bg-reader);
+  border-bottom: 1px solid var(--color-border-dark);
+  animation: slideDown var(--transition-normal) forwards;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  color: var(--color-icon-dark);
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.backButton:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.backButton:active {
+  opacity: 0.7;
+}
+
+.topBarTitle {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.topBarSpacer {
+  width: 36px;
+  flex-shrink: 0;
+}
+
+/* 中间透明区域（点击关闭） */
+.middleArea {
+  flex: 1;
+}
+
+/* 底部菜单栏 */
+.panel {
+  background-color: var(--color-bg-reader);
+  border-top: 1px solid var(--color-border-dark);
+  padding-top: 10px;
+  animation: slideUp var(--transition-normal) forwards;
+}
+
+/* 设置内容区域 - tab区 */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+/* 设置按钮（夜间模式等） */
+.settingButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-icon-default);
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.settingButton:active {
+  opacity: 0.7;
+}
+
+.settingButton .settingIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 夜间模式激活状态 */
+.settingButton.active {
+  color: var(--color-accent);
+}
+
+.settingLabel {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 400;
+  color: inherit;
+}
+
+/* 动画 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

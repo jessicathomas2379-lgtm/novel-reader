@@ -1,0 +1,252 @@
+/* 个人中心页面 - 精确匹配 Figma 设计稿 375x812 */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  padding-bottom: 60px; /* tabbar height */
+}
+
+/* 顶部背景 */
+.headerBg {
+  position: relative;
+  width: 100%;
+  height: 120px;
+}
+
+.bgImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* 用户信息 */
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  margin-top: -28px;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--color-bg-primary);
+}
+
+.username {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* 最近阅读模块 */
+.recentSection {
+  margin: 16px 12px 12px;
+  background-color: var(--color-bg-primary);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.recentList {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.recentList::-webkit-scrollbar {
+  display: none;
+}
+
+.recentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75px;
+  flex-shrink: 0;
+  cursor: pointer;
+  outline: none;
+  gap: 4px;
+}
+
+.recentItem:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.recentCover {
+  width: 75px;
+  height: 100px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.recentBookTitle {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+}
+
+.recentProgress {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+/* 空状态 */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 0;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+}
+
+.emptyText {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.goReadButton {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--color-accent);
+  background: none;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  padding: 4px 16px;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.goReadButton:active {
+  opacity: 0.7;
+}
+
+/* 其他功能 */
+.settingsSection {
+  margin: 0 12px;
+  background-color: var(--color-bg-primary);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingLabel {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.settingValue {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+/* Tabbar */
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-bg-primary);
+  border-top: 1px solid var(--color-border);
+  padding: 8px 0;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  z-index: 100;
+}
+
+.tabItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+}
+
+.tabItem:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tabIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-primary);
+}
+
+.tabIconInactive {
+  width: 24px;
+  height: 24px;
+  color: var(--color-icon-default);
+  opacity: 0.5;
+}
+
+.tabLabel {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.tabLabelInactive {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--color-text-tabbar-inactive);
+}
