@@ -30,8 +30,6 @@
 .fixedTop {
   position: relative;
   flex-shrink: 0;
-  padding-top: env(safe-area-inset-top, 44px);
-  background-color: transparent;
   z-index: 50;
 }
 
@@ -39,6 +37,7 @@
   position: relative;
   width: 100%;
   height: 76px;
+  margin-top: env(safe-area-inset-top, 44px);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -86,7 +85,7 @@
   overflow-y: auto;
   padding: 0 12px;
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: calc(60px + env(safe-area-inset-bottom) + 12px);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -322,8 +321,10 @@
 
 /* Tabbar */
 .tabbar {
-  position: relative;
-  flex-shrink: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
