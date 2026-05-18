@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { novels } from '../../data/novels';
-import { IconHot, IconSearch, IconRefresh, IconTabbarHome, IconTabbarProfile } from '../../components/Icons';
+import { IconHot, IconSearch, IconRefresh, IconTabbarHomeActive, IconTabbarProfile } from '../../components/Icons';
 import styles from './HomePage.module.css';
 import topBg from '../../assets/images/pic-top-bg.png';
 
@@ -45,10 +45,12 @@ export function HomePage() {
 
   return (
     <div className={styles.page}>
+      {/* 背景图 - 铺在所有图层最下面 */}
+      <img src={topBg} alt="" className={styles.headerBg} aria-hidden="true" />
+
       {/* 顶部固定区域 */}
       <div className={styles.fixedTop}>
         <div className={styles.header}>
-          <img src={topBg} alt="" className={styles.headerBg} aria-hidden="true" />
           <div className={styles.searchBar}>
             <div className={styles.searchLeft}>
               <IconHot width={16} height={16} className={styles.hotIconSearch} aria-hidden />
@@ -155,7 +157,7 @@ export function HomePage() {
       {/* Tabbar */}
       <nav className={styles.tabbar} aria-label="主导航">
         <button className={`${styles.tabItem} ${styles.tabActive}`} type="button" aria-current="page">
-          <IconTabbarHome width={24} height={24} className={styles.tabIcon} />
+          <IconTabbarHomeActive width={24} height={24} className={styles.tabIcon} />
           <span className={styles.tabLabel}>首页</span>
         </button>
         <button className={styles.tabItem} type="button" onClick={handleProfileClick}>

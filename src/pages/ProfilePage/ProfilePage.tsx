@@ -5,7 +5,7 @@ import { useReadingHistory } from '../../hooks/useReadingHistory';
 import { useToast } from '../../hooks/useToast';
 import Toggle from '../../components/Toggle';
 import ConfirmDialog from '../../components/ConfirmDialog';
-import { IconTabbarHome, IconTabbarProfile } from '../../components/Icons';
+import { IconTabbarHome, IconTabbarProfileActive } from '../../components/Icons';
 import { safeGetItem, safeSetItem } from '../../utils/storage';
 import { STORAGE_KEYS } from '../../utils/constants';
 import topBg from '../../assets/images/pic-top-bg.png';
@@ -90,16 +90,18 @@ export function ProfilePage() {
 
   return (
     <div className={styles.page}>
-      {/* 顶部背景 */}
+      {/* 顶部背景 - 铺在最底层 */}
       <div className={styles.headerBg}>
         <img src={topBg} alt="" className={styles.bgImage} aria-hidden="true" />
       </div>
 
-      {/* 用户信息 */}
-      <div className={styles.userSection}>
-        <img src={avatar} alt="用户头像" className={styles.avatar} />
-        <h2 className={styles.username}>读者小明</h2>
-      </div>
+      {/* 中间可滚动内容 */}
+      <div className={styles.content}>
+        {/* 用户信息 */}
+        <div className={styles.userSection}>
+          <img src={avatar} alt="用户头像" className={styles.avatar} />
+          <h2 className={styles.username}>读者小明</h2>
+        </div>
 
       {/* 最近阅读模块 */}
       <section className={styles.recentSection}>
@@ -165,6 +167,7 @@ export function ProfilePage() {
           <span className={styles.settingValue}>v1.0.0</span>
         </div>
       </section>
+      </div>
 
       {/* Tabbar */}
       <nav className={styles.tabbar} aria-label="主导航">
@@ -173,7 +176,7 @@ export function ProfilePage() {
           <span className={styles.tabLabelInactive}>首页</span>
         </button>
         <button className={`${styles.tabItem} ${styles.tabActive}`} type="button" aria-current="page">
-          <IconTabbarProfile width={24} height={24} className={styles.tabIcon} />
+          <IconTabbarProfileActive width={24} height={24} className={styles.tabIcon} />
           <span className={styles.tabLabel}>我的</span>
         </button>
       </nav>
