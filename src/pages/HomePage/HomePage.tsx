@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { novels } from '../../data/novels';
-import { StatusBar } from '../../components/StatusBar';
 import { IconHot, IconSearch, IconRefresh, IconTabbarHome, IconTabbarProfile } from '../../components/Icons';
 import styles from './HomePage.module.css';
 import topBg from '../../assets/images/pic-top-bg.png';
@@ -48,7 +47,6 @@ export function HomePage() {
     <div className={styles.page}>
       {/* 顶部固定区域 */}
       <div className={styles.fixedTop}>
-        <StatusBar />
         <div className={styles.header}>
           <img src={topBg} alt="" className={styles.headerBg} aria-hidden="true" />
           <div className={styles.searchBar}>

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../hooks/useTheme';
 import { useReadingHistory } from '../../hooks/useReadingHistory';
 import { useToast } from '../../hooks/useToast';
-import { StatusBar } from '../../components/StatusBar';
 import Toggle from '../../components/Toggle';
 import ConfirmDialog from '../../components/ConfirmDialog';
 import { IconTabbarHome, IconTabbarProfile } from '../../components/Icons';
@@ -91,9 +90,6 @@ export function ProfilePage() {
 
   return (
     <div className={styles.page}>
-      {/* 状态栏 */}
-      <StatusBar />
-
       {/* 顶部背景 */}
       <div className={styles.headerBg}>
         <img src={topBg} alt="" className={styles.bgImage} aria-hidden="true" />

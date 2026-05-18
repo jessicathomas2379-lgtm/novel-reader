@@ -4,7 +4,6 @@
 @import './variables.css';
 
 :root {
-  --status-bar-height: 44px;
 }
 
 html,
@@ -47,6 +46,5 @@ body {
 
 /* 安全区域适配 */
 body {
-  padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }

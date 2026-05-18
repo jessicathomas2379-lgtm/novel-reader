@@ -4,7 +4,6 @@ import { novels } from '../../data/novels';
 import { useTheme } from '../../hooks/useTheme';
 import { useReadingHistory } from '../../hooks/useReadingHistory';
 import { ReaderSettingsPanel } from '../../components/ReaderSettingsPanel/ReaderSettingsPanel';
-import { StatusBar } from '../../components/StatusBar';
 import { IconArrowLeft } from '../../components/Icons';
 import styles from './ReaderPage.module.css';
 
@@ -91,7 +90,6 @@ export function ReaderPage() {
     <div className={styles.container}>
       {/* 顶部固定导航 */}
       <div className={styles.fixedTop}>
-        <StatusBar />
         <div className={styles.topNav}>
           <IconArrowLeft
             width={18}
